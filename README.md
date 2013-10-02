@@ -7,10 +7,10 @@
 
 ## Install
 
-Provided `.twitter-friends` is cloned to $HOME:
+Provided `twitter-tf-idf-demo` is cloned to $HOME:
 
-	$ virtualenv --python=/usr/bin/python2.7 ~/.twitter-friends
-	$ source ~/.twitter-friends/bin/activate
+	$ virtualenv --python=/usr/bin/python2.7 ~/twitter-tf-idf-demo
+	$ source ~/twitter-tf-idf-demo/bin/activate
 	$ pip install -r requirements.txt
 	$ cp local-add-config.sh.sample local-add-config.sh
 
