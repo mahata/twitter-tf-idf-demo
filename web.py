@@ -26,7 +26,7 @@ def index():
 def result():
     twitterScreenNames = [screenName[1:] if screenName.startswith('@') else screenName for screenName in re.split(' |,', request.form['twitterScreenNames'])]
 
-    # correct documents
+    # collect documents
     documents = {}
     for twitterScreenName in twitterScreenNames:
         statuses = api.GetUserTimeline(screen_name = twitterScreenName, count = 100)
