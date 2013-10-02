@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div>
+
+<form method="POST" action="/result">
+<input id="twitterScreenNames" name="twitterScreenNames" type="text" size="64" value="odersky gvanrossum invoker" placeholder="Please input comma separated twitter usernames" />
+<input type="submit" />
+</form>
+
+</div>
+{% endblock %}

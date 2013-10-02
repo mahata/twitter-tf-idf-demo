@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1><a name="page-top">TF-IDF Scores</a></h1>
+
+<ul>
+{% for screenName in var.twitterScreenNames %}
+  <li><a href="#{{ screenName}}">@{{ screenName }}</li>
+{% endfor %}
+</ul>
+
+<div>
+
+{# <div id="all-words" style="display: none;">{{ var.allWords|tojson|safe }}</div> #}
+{# <div id="tf-idf" style="display: none;">{{ var.tfIdf|tojson|safe }}</div> #}
+
+<div id="table-list">
+{% for screenName in var.twitterScreenNames %}
+
+<h2><a name="{{ screenName }}">@{{ screenName }}</a></h2>
+
+<p><a href="#page-top">Go to page-top</a></p>
+
+<table>
+<thead>
+  <tr>
+    <th>Word</th>
+    <th>TF-IDF Score</th>
+  </tr>
+</thead>
+<tbody>
+{% for word in var.tfIdf[screenName] %}
+  <tr>
+    <td>{{ word[0] }}</td>
+    <td>{{ word[1] }}</td>
+  </tr>
+{% endfor %}
+</tbody>
+</table>
+
+{% endfor %}
+</div>
+
+
+{# <script type="text/javascript" src="/static/js/result.js"></script> #}
+
+</div>
+{% endblock %}

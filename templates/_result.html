@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block main %}
+<div>
+
+<div id="container" style="min-width: 310px; height: 200000px; margin: 0 auto"></div>
+<div id="all-words" style="display: none;">{{ var.allWords|tojson|safe }}</div>
+<div id="tf-idf" style="display: none;">{{ var.tfIdf|tojson|safe }}</div>
+
+<script type="text/javascript" src="/static/js/_result.js"></script>
+
+</div>
+{% endblock %}
